@@ -168,7 +168,7 @@ public class MyTest {
 	 * Tests the "removeAll" method with a  list with one elements
 	 * element.
 	 * 
-	 * @see PhonyList#revove(Object)
+	 * @see PhonyList#removeAll(Object)
 	 * @type Functional
 	 * @input list=[]
 	 * @oracle It must return true.
@@ -186,10 +186,27 @@ public class MyTest {
 	}
 	
 	/**
+	 * Tests the "removeRange" method with a  list with 3 elements
+	 * by using removeRageAux .
+	 * 
+	 * @see PhonyList#removeRange(Object)
+	 * @type Functional
+	 * @input list=[]
+	 * @oracle It must return true.
+	 * @passed Yes
+	 */
+	@Test
+	public void removeRangeTest(){
+		PhonyList<Integer> list = list(1,2,3);
+		list.romoveRangeAux(1,2);
+		assertTrue(list.size()==2);
+	}
+	
+	/**
 	 * Tests the "removeAll" method with a  list with one elements
 	 * element.
 	 * 
-	 * @see PhonyList#revove(Object)
+	 * @see PhonyList#removeAll(Object)
 	 * @type Functional
 	 * @input list=[]
 	 * @oracle It must return true.
@@ -204,6 +221,26 @@ public class MyTest {
 		Collection C = maListe;
 		list.addAll(1,C);
 		assertTrue(list.size()==3);
+	}
+	
+	/**
+	 * Tests the "addAll" method with a  list with one elements
+	 * element.
+	 * 
+	 * @see PhonyList#addAll(Object)
+	 * @type Functional
+	 * @input list=[]
+	 * @oracle It must return true.
+	 * @passed Yes
+	 */
+	@Test
+	public void addAllTest2(){
+		PhonyList<Integer> list = list(4,6,5,7);
+		Collection  maListe=new LinkedList();
+		maListe.add(1);
+		maListe.add(2);
+		list.addAll(0,maListe);
+		assertTrue(list.size()==6);
 	}
 	
 	/**

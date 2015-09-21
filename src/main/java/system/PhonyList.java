@@ -361,6 +361,16 @@ public class PhonyList<E> {
         }
         size = newSize;
     }
+    /**
+     * Removes from this list all of the elements whose index is between
+     * {@code fromIndex}, inclusive, and {@code toIndex}, exclusive.This 
+     * method help to test romoveRange
+     * @param fromIndex
+     * @param toIndex
+     */
+    public void romoveRangeAux(int fromIndex, int toIndex) {
+    	removeRange(fromIndex,toIndex);
+    }
 
     /**
      * Checks if the given index is in range. If not, throws an appropriate
